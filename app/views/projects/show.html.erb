@@ -1,0 +1,14 @@
+<%= link_to 'Back', projects_path, class: 'btn btn-outline-primary mb-3' %>
+<div class="card"></div>
+  <div class="card-body">
+    <h2 class="card-title d-flex justify-content-between mb-4">
+      <span><%= @project.name %></span>
+      <div>
+        <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-secondary' %>
+        <%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      </div>
+    </h2>
+
+
+  </div>
+</div>
