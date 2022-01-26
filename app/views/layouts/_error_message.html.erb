@@ -1,0 +1,7 @@
+<% if @project.errors.any? %>
+  <ul>
+    <% @project.errors.each do |error| %>
+      <li><span style="color: red;"><%= error.full_message %></span></li>
+    <% end %>
+  </ul>
+<% end %>

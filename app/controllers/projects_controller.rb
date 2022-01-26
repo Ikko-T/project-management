@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: %i[show edit update destroy]
 
   def index
-    @projects = current_user.projects.order(id: :desc)
+    @projects = current_user.projects.order(created_at: :desc)
   end
 
   def new
@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy!
-    redirect_to projects_path, notice: "Project was successfully deleted."
+    redirect_to projects_path, alert: "Project was successfully deleted."
   end
 
   private

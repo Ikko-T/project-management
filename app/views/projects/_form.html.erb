@@ -1,16 +1,6 @@
+<%= render "layouts/error_message" %>
+
 <%= form_with model: @project, local: true do |form| %>
-  <% if @project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
-
-      <ul>
-        <% @project.errors.full_message.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="form-group mb-4">
     <%= form.label :name %>
     <%= form.text_field :name, class: 'form-control' %>
@@ -24,5 +14,4 @@
   <div class="actions">
     <%= form.submit class: 'btn btn-primary form-control' %>
   </div>
-
 <% end %>
