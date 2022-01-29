@@ -1,7 +1,17 @@
-<% if @project.errors.any? %>
-  <ul>
-    <% @project.errors.each do |error| %>
-      <li><span style="color: red;"><%= error.full_message %></span></li>
+<% if params[:controller] == 'projects'%>
+  <% if @project.errors.any? %>
+    <ul>
+      <% @project.errors.each do |error| %>
+        <li><span style="color: red;"><%= error.full_message %></span></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% else %>
+  <% if @task.errors.any? %>
+      <ul>
+        <% @task.errors.each do |error| %>
+          <li><span style="color: red;"><%= error.full_message %></li>
+        <% end %>
+      </ul>
     <% end %>
-  </ul>
 <% end %>
