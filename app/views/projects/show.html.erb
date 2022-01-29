@@ -9,6 +9,30 @@
       </div>
     </h2>
 
+    <div class="mb-4">
+      <h6>Add Task</h6>
+      <%= render "tasks/form" %>
+    </div>
 
+    <h4>Tasks</h4>
+    <% @project.tasks.each do |task| %>
+      <% if task.persisted? %>
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="d-flex">
+              <span class="badge"><%= task.status %></span>
+              <div>
+                <%= link_to 'Edit', edit_project_task_path(task.project, task) %>
+                <%= link_to 'Delete', project_task_path(task.project, task), method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
+            </div>
+            <h5 class="card-title">
+              <span><%= task.name %></span>
+            </h5>
+            <p><%= task.description %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>

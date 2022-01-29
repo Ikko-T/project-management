@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
     @project = current_user.projects.build(project_params)
 
     if @project.save
-      redirect_to @project, notice: "Project was successfully created."
+      redirect_to project_path(@project), notice: "Project was successfully created."
     else
       flash.now[:alert] = "Project was NOT created!"
       render :new
@@ -23,6 +23,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @task = @project.tasks.build
   end
 
   def edit
@@ -30,7 +31,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      redirect_to @project, notice: "Project was successfully updated."
+      redirect_to project_path, notice: "Project was successfully updated."
     else
       flash.now[:alert] = "Project was NOT updated!"
       render :edit
