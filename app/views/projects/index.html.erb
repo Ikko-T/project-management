@@ -10,12 +10,15 @@
         <div class="card project-card border-info mb-3">
           <div class="card-body">
             <div class="mb-3">
-              <span class="badge"><%# project.status%></span>
+              <span class="badge bg-<%= project.badge_color %>"><%= project.status %></span>
               <span class="text-secondary">
-                <small></small>
+                <small>
+                  <%= project.percent_complete %>% complete
+                  (<%= project.total_complete %>/<%= project.total_tasks %> tasks)
+                </small>
               </span>
             </div>
-            <h5 class="card-title"><b><%= project.name %></b></h5>
+            <h5 class="card-title text-dark"><b><%= project.name %></b></h5>
             <p class="text-secondary"><%= project.description %></p>
           </div>
         </div>
