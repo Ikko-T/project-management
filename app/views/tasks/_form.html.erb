@@ -19,7 +19,7 @@
 
   <div class="form-group">
     <%= form.label :status %><br>
-    <%= form.text_field :status, class: 'form-control' %><br>
+    <%= form.select :status, select_status, {}, class: 'form-control' %><br>
   </div>
 
   <div class="actions">
