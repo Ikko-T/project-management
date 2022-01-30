@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Project Management</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <%# <span class="navbar-toggler-icon"></span> %>
+    </button>
+
+    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item text-white m-2 pt-1">
+            <%= "#{ current_user.email }" %>
+          </li>
+          <li class="nav-item btn btn-outline-light m-2 text-decoration-none">
+            <%= link_to 'Log Out', destroy_user_session_path, method: :delete, data: { confirm: "Do you want to log out?" }, class: 'text-decoration-none text-dark'  %>
+          </li>
+        <% else %>
+          <li class="nav-item btn btn-outline-light m-2">
+            <%= link_to 'Log In', new_user_session_path, class: 'text-decoration-none text-dark' %>
+          </li>
+          <li class="nav-item btn btn-outline-light m-2">
+            <%= link_to 'Sign Up', new_user_registration_path, class: 'text-decoration-none text-dark' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
