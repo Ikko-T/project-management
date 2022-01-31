@@ -22,14 +22,14 @@
       <ul>
         <li><a href="#build-with">Build With</a></li>
         <li><a href="#gems-used">Gems Used</a></li>
-        <li><a href="#er-diagram">ER Diagram</a></li>
+        <li><a href="#entity-relationship-diagram">ER Diagram</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="prerequisites">Prerequisites</a></li>
-        <li><a href="installation">Installation</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
