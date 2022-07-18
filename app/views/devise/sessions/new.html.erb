@@ -21,8 +21,12 @@
           </div>
         <% end %>
 
-        <div class="actions">
+        <div class="actions mb-4">
           <%= f.submit "Log in", class: 'btn btn-secondary form-control' %>
+        </div>
+
+        <div class="actions">
+          <%= link_to "Login As Guest User", users_guest_sign_in_path, method: :post, class: 'btn btn-warning form-control' %>
         </div>
       <% end %>
       <br>
