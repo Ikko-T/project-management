@@ -127,4 +127,4 @@ Below are instructions on getting you a copy of the project up and running on yo
 [app-shield]: https://img.shields.io/badge/APP-2%20%2F%2020-yellowgreen
 [title-shield]: https://img.shields.io/badge/PROJECT%20TITLE-Project%20Management-green
 [purpose-shield]: https://img.shields.io/badge/PURPOSE-Coding%20Challenge%20Websites-blue
-[project-url]: https://project-management-production.herokuapp.com/
+[project-url]: https://whale-app-5uqb3.ondigitalocean.app/
